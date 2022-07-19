@@ -31,3 +31,10 @@ print(result) #elppa
 result2 = "".join(reverse_word)
 print(result2) #elppa
 ```
+
+### replace()로 특정 문자 삭제하기
+```python
+word = 'banana'
+word = word.replace('a', '') # .replace(삭제하고 싶은 문자, 빈칸(?))
+print(word) #bnn
+```
