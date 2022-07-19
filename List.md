@@ -17,7 +17,7 @@
 이 함수를 이용하면 매개변수로 들어온 ['a','b','c']와 같은 리스트를 'abc'처럼 **문자열로 합쳐서 반환**해줌
 example)
 ```python
-word = input()
+word = input() #apple
 reverse_word = []
 for i in range(1,len(word)+1):
     reverse_word.append(word[-i])
@@ -25,8 +25,9 @@ for i in range(1,len(word)+1):
 result = ""
 for j in range(len(reverse_word)):
     result += reverse_word[j]
-print(result)
+print(result) #elppa
+
 #2 .join()함수 사용
 result2 = "".join(reverse_word)
-print(result2)
+print(result2) #elppa
 ```
