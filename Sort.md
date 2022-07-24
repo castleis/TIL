@@ -1,6 +1,18 @@
 # Sort
 2개 이상의 자료를 **특정 기준(key)**으로 정렬하기!
 
+**시간복잡도**
+특정한 크기의 입력에 대하여 알고리즘이 얼마나 오래걸리는지, 알고리즘을 위해 필요한 연산의 횟수
+
+```python
+#수행 시간 측정 소스코드
+import time
+start_time = time.time() #측정시작
+
+end_time = time.time() #측정 종료
+print("time :", end_time - start_time) #수행 시간 출력
+```
+
 1. 버블 정렬 (Bubble)
 인접한 두 개의 원소를 비교하며 자리를 계속 교환하는 방식
 - 첫 번째 원소부터 인접한 원소끼리 계속 자리를 교환하면서 맨 마지막 자리까지 이동
@@ -40,7 +52,14 @@ def CountingSort(A,B,k):
 3. 선택 정렬 (Selection sort)
 - 시간 복잡도 : O(n^2)
 - 교환 횟수가 버블, 삽입정렬보다 작음.
-- 
+```python
+for i in range(len(array)):
+    min_index = i  #가장 작은 원소의 인덱스
+    for j in range(i+1, len(array)):
+        if array[min_index] > array[j]: #인덱스 i 다음의 원소들과 비교해서 더 작은 값의 인덱스를 min_index로 지정
+            min_index = j
+    array[min_index], array[j] = array[j], array[min_index] #for문을 돌면서 확인한 가장 작은 값과 위치를 스와프
+
 4. 퀵 정렬 (Quick sort)
 - 시간 복잡도 : O(n log n)
 - 분할정복으로 최악의 경우 시간복잡도가 O(n^2)이지만 평균적으로는 가장 빠름
