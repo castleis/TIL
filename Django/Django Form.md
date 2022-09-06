@@ -51,6 +51,8 @@
       - `exclude` : 사용하지 않을 필드만 제외
 
 ### 2. view 함수의 구조 변화 (CRUD)
+- HTTP requests 처리에 따른 구조 변화
+  
   1. Create
 - ```python
     form = '모델명'(request.POST)
