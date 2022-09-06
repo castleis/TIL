@@ -55,3 +55,14 @@ CSRF 공격 방어
             → 외부 URL로 향하는 POST form에 대해서는 CSRF 토큰이 유출되어 취약성을 유발할 수 있기 때문에 사용해서는 안됨!!!
         - form 태그 안의 input type이 hidden으로 작성되며 value는 Django에서 생성한 hash 값으로 설정됨
     - 즉, **csrf_token 은 해당 POST 요청이 내가 보낸 것인지를 검증하는 것!!**
+
+# Handling HTTP request
+- 같은 목적의 요청을 처리하는 여러개의 view 함수를 method에 따라 같은 view 함수 내에서 처리하도록 해보자
+- `if request.method == 'POST':`
+  - POST방식의 view 함수 (게시판 pjt의 create)
+  - 사용자의 입력을 받아서 DB에 저장 후 redirect
+  - 즉, DB 조작이 들어가는 코드!
+- `else:`
+  - **request.method가 POST가 아니라면**
+  - POST가 아닌 다른 방식의 view 함수 (게시판 pjt의 new)
+  - 사용자에게 필요한 페이지를 render
