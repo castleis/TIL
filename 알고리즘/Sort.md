@@ -59,7 +59,7 @@ for i in range(len(array)):
         if array[min_index] > array[j]: #인덱스 i 다음의 원소들과 비교해서 더 작은 값의 인덱스를 min_index로 지정
             min_index = j
     array[min_index], array[j] = array[j], array[min_index] #for문을 돌면서 확인한 가장 작은 값과 위치를 스와프
-
+```
 4. 퀵 정렬 (Quick sort)
 - 시간 복잡도 : O(n log n)
 - 분할정복으로 최악의 경우 시간복잡도가 O(n^2)이지만 평균적으로는 가장 빠름
