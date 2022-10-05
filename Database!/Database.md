@@ -543,3 +543,16 @@ CREATE TABLE classmates(
         2. WHERE 절에 검색 조건을 추가하여 제거할 행을 식별
             - WHERE 절은 선택 사항이며, 생략하면 DELETE 문은 테이블의 모든 행을 삭제
         3. 선택적으로 ORDER BY 및 LIMIT 절을 사용하여 삭제할 행 수를 지정할 수도 있음
+```sql
+-- 5번 데이터 삭제하기
+DELETE FROM classmates WHERE rowid = 5;
+
+-- 삭제된 것 확인하기
+SELECT rowid, * FROM classmates;
+
+-- 이름이 '영'이 포함되는 데이터 삭제하기
+DELETE FROM classmates WHERE name LIKE '%영%'
+
+-- 테이블의 모든 데이터 삭제하기
+DELETE FROM classmates;
+```
