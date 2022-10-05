@@ -173,12 +173,12 @@ SQLite에는 별도의 Boolean 타입이 없고 정수 0 (false)와 1(true)로 �
 
 - 저장되는 값의 데이터 타입은 컬럼에 선언된 데이터 타입에 의해 결정됨
 
-```sql
-CREATE TABLE my_table (
-	a INTEGER NOT NULL,
-	b TEXT NOT NULL,
-);
-```
+	```sql
+	CREATE TABLE my_table (
+		a INTEGER NOT NULL,
+		b TEXT NOT NULL,
+	);
+	```
 
 - 만약 a 컬럼에 ‘123’, b 컬럼에 456 데이터를 삽입하려는 경우 삽입을 수행하기 전에 문자열 ‘123’을 정수 123으로 변환하고 정수 456을 문자열 ‘456’으로 변환
 ```
