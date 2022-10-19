@@ -8,7 +8,7 @@ const avengers = [
 const avenger = avengers.find((avenger) => {
     return avenger.name === 'Tony Stark'
 })
-console.log(avenger)
+console.log(avenger)    // {name: 'Tony Stark', age: 45}
 
 ///////////////////////////////////////////////////
 const arr = [1,2,3,4,5]
@@ -23,8 +23,8 @@ const result2 = arr.some((elem) => {
 })
     // 3.
 const result3 = arr.some((elem) => elem % 2 === 0)
-console.log(result3)
+console.log(result3)    // true
 
 // every
 const result4 = arr.every((elem) => elem % 2 === 0)
-console.log(result4)
+console.log(result4)    // false

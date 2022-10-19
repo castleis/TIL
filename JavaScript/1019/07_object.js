@@ -34,6 +34,26 @@ const myObj = {
 console.log(myObj)
 console.log(myObj.country)
 
+// ===== 구조 분해 할당 =====
+const userInfo = {
+	name: 'ssafy kim',
+	userId: 'ssafyStudent1234',
+	phone: '010-1234-5678',
+	email: 'ssafy@ssafy.com'
+}
+const { name } = userInfo
+const { userId } = userInfo
+const { phoneNumber } = userInfo
+const { email } = userInfo
+// 여러개도 가능
+// const { name,userId } = userInformation
+
+// ===== Spread syntax =====
+const obj1 = {b: 2, c: 3, d: 4}
+const newObj = {a: 1, ...obj1, e: 5}
+
+console.log(newObj)     // {a: 1, b: 2, c: 3, d: 4, e: 5}
+
 // ===== JSON =====
 const jsonData = {
     coffee: 'Americano',
