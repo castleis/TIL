@@ -22,8 +22,8 @@ int main()
     // p가 Dog라면, GetColor()로 color를 출력하고 싶으면 다운캐스팅을 수행해야 함.
     // : 부모의 포인터(참조) 타입을 자식의 포인터(참조) 타입으로의 암묵적인 변환이 허용되지 않음.
     // => 명시적인 캐스팅이 필요함.
-    //      - static_cast을 사용.
-    //         : 하지만 잘못된 타입이 지정되어도 캐스팅이 수행됨.
+    //    - static_cast을 사용.
+    //    : 하지만 잘못된 타입이 지정되어도 캐스팅이 수행됨.
     // 1) 따라서 p가 Dog 타입인지 조사해야 함.
     // => RTTI (Run Time Type Information) --> 개념적으로만 알아두기... 쓰지 말라... @.@...(타입에 의존하면 확장성이 구림, 쓰는 사람은 시말서 각)
     // typeid 연산자를 통해 타입의 정보를 담은 구조체를 얻을 수 있음.
@@ -40,6 +40,7 @@ int main()
         cout << "It's not Dog type" << endl;
     }
 #endif
+
     Dog* pDog = dynamic_cast<Dog*>(p);
     /*
     **dynamic_cast**
