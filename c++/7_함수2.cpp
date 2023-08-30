@@ -36,5 +36,5 @@ void foo() { cout << "foo()" << endl; }
 
 int main()
 {
-    foo();   // 모호성 오류!
+    foo();   // 모호성 오류! 기본값을 가지고 있는 foo 함수인지, void를 받는 두번째 foo 함수인지 알 수 없음.
 }
